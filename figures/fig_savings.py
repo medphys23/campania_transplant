@@ -1,5 +1,5 @@
 """
-Fig 17.1: Ten-year cumulative savings by transplant expansion scenario.
+Fig 17.1: Ten-year cumulative savings by transplant expansion scenario.s
 Fig 17.2: Annual savings by intervention type (transplant, PIRP, pre-emptive).
 Fig 17.3: Ten-year cumulative savings — PIRP vs BAU.
 """
