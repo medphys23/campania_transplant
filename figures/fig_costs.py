@@ -1,6 +1,6 @@
 """
 Fig 12.1: Annual per-patient cost by modality.
-Fig 13.1: 10-year cumulative cost trajectories (dialysis vs transplant per patient).
+Fig 13.1: 10-year cumulative cost trajectories (dialysis vs transplant per patient).s
 Fig 14.1: Current annual ESKD cost distribution.
 """
 import numpy as np

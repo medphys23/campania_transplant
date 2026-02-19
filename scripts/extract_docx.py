@@ -1,6 +1,6 @@
 """
 Extract text and tables from a Word document for auditing.
-Outputs paragraphs and tables in document order, and notes figure/image positions.
+Outputs paragraphs and tables in document order, and notes figure/image positions.s
 """
 import sys
 from pathlib import Path

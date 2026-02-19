@@ -1,5 +1,5 @@
 """
-Fig 12.2: Economic model structure — three modules contributing to total savings.
+Fig 12.2: Economic model structure — three modules contributing to total savings.s
 """
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches

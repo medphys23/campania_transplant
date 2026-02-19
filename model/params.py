@@ -1,6 +1,6 @@
 """
 Parameter definitions with Low/Base/High ranges for GUI sliders.
-Single source of truth for the economic model (Appendix X + Table 17.1).
+Single source of truth for the economic model (Appendix X + Table 17.1).s
 """
 from dataclasses import dataclass, field
 from typing import Tuple

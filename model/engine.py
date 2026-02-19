@@ -1,5 +1,5 @@
 """
-Economic model engine: all equations from Appendix X and document Sections 12–17.
+Economic model engine: all equations from Appendix X and document Sections 12–17.s
 Pure functions; no GUI or plotting.
 """
 import numpy as np

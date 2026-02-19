@@ -7,7 +7,7 @@
 
 > Budget-impact model and interactive dashboard for the Campania transplant / PIRP paper. Implements the equations from the source document (Appendix X and Table 17.1). Vary assumptions via sliders and use the dashboard numbers and figures directly in your manuscript.
 
----
+--- 
 
 ## Contents
 
