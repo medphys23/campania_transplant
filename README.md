@@ -190,7 +190,7 @@ Figures and the dashboard read from this dict and the same parameter set so all 
 | `model/engine.py` | All formulas: AddTx, S_TX, S_PIRP, S_PRE, cumulative (optional discounting), break-even, burden, Cum_TX_B, Cum_PIRP |
 | `figures/` | Matplotlib: `fig_costs.py` (12.1, 13.1, 14.1), `fig_model_schema.py` (12.2), `fig_savings.py` (17.1–17.3) |
 | `scripts/extract_docx.py` | Extracts `documents/campania_transplant_final.docx` → `documents/campania_transplant_extracted.md` |
-| `documents/` | Source docx, extracted markdown, and `AUDIT_REPORT.md` |
+| `documents/` | Source docx, extracted markdown, `AUDIT_REPORT.md`, and `DOCUMENT_VS_ARTICLES.md` (comparison to source articles) |
 
 ---
 
@@ -225,4 +225,4 @@ python scripts/extract_docx.py
 
 ## ✅ Audit and checks
 
-**[documents/AUDIT_REPORT.md](documents/AUDIT_REPORT.md)** summarises calculation checks, graph suggestions, and extended insights from the audit of the original document. The model implements the document formulas; the audit notes where the text had inconsistencies (e.g. PIRP €6M vs formula €58M) so you can align the paper narrative.
+**[documents/AUDIT_REPORT.md](documents/AUDIT_REPORT.md)** summarises calculation checks, graph suggestions, and extended insights. **[documents/DOCUMENT_VS_ARTICLES.md](documents/DOCUMENT_VS_ARTICLES.md)** compares the document to source articles (Rucci, Gibertoni, Cirillo) and lists discrepancies to fix in the Word document. The model implements the document formulas; PIRP annual savings (~€6M) are consistent with the formula (AvoidInc = 116).

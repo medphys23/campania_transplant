@@ -1,6 +1,10 @@
 """
 Parameter definitions with Low/Base/High ranges for GUI sliders.
-Single source of truth for the economic model (Appendix X + Table 17.1).s
+Single source of truth for the economic model (Appendix X + Table 17.1).
+Base values: document Appendix X / Table 17.1; Campania population 5.8M (ISTAT).
+inc_pmp base 172 = midpoint of Cirillo [7] de novo haemodialysis 160–185 pmp.
+n_dial base 5,850 = midpoint of Cirillo Table 4.1 HD ~5,800–5,900 by year.
+pop_m, c_dial, c_tx1, c_txm: update when Campania/ISTAT/tariff data available.
 """
 from dataclasses import dataclass, field
 from typing import Tuple
@@ -28,11 +32,11 @@ def default_ranges() -> dict:
         "c_dial": ParamRange(30_000.0, 80_000.0, 50_000.0),
         "c_tx1": ParamRange(40_000.0, 100_000.0, 60_000.0),
         "c_txm": ParamRange(5_000.0, 25_000.0, 12_000.0),
-        "inc_pmp": ParamRange(80.0, 350.0, 200.0),
+        "inc_pmp": ParamRange(80.0, 350.0, 172.0),
         "pirp_r": ParamRange(0.0, 0.30, 0.10),
         "preempt_share": ParamRange(0.0, 0.50, 0.20),
         "preempt_delta": ParamRange(5_000.0, 50_000.0, 20_000.0),
-        "n_dial": ParamRange(2_000.0, 15_000.0, 6_500.0),
+        "n_dial": ParamRange(2_000.0, 15_000.0, 5_850.0),
         "r_disc": ParamRange(0.0, 0.10, 0.03),
     }
 
