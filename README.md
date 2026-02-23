@@ -41,7 +41,7 @@ Open the URL shown (e.g. `http://localhost:8501`). Change any slider—the dashb
 |--------|-------------|
 | **Sidebar** | Sliders for all parameters (population, transplant rates, costs, PIRP reduction, pre-emptive share, discount rate, etc.) with wide min/max ranges for sensitivity. |
 | **Key numbers** | Base values plus sensitivity ranges (dialysis ±€15k, tx year 1 ±€10k, tx year 2+ ±€2.5k)—e.g. *€25.5M* with *Range: €22.1M – €28.9M* underneath. |
-| **Incident dialysis & PIRP impact** | New dialysis cases per year (200 pmp from document), cases avoided per year with PIRP, and € savings (avoided cases × dialysis cost). |
+| **Incident dialysis & PIRP impact** | New dialysis cases per year (base 172 pmp, from Cirillo), cases avoided per year with PIRP, and € savings (avoided cases × dialysis cost). |
 | **10-year savings by intervention** | Totals for PIRP, transplant expansion, pre-emptive, and combined (undiscounted for comparability). |
 | **10-year dialysis cost projection** | BAU cost over 10 years, cost with PIRP only, cost with PIRP + transplant expansion, and total reduction vs BAU. |
 | **Figures** | Tabs for Fig 12.1 (modality costs), 12.2 (model structure), 13.1 (cumulative cost per patient), 14.1 (ESKD distribution), 17.1–17.3 (savings by scenario). Each has a **Download PNG** button. |
@@ -83,11 +83,11 @@ No health outcomes (QALYs, survival) are modelled—only costs and savings.
 | `c_dial` | Annual dialysis cost (€/patient) | 50 000 | All-in maintenance dialysis |
 | `c_tx1` | Transplant year 1 cost (€) | 60 000 | Index episode + follow-up |
 | `c_txm` | Transplant year 2+ cost (€) | 12 000 | Immunosuppression + outpatient |
-| `inc_pmp` | Incident ESKD (pmp/year) | 200 | Campania baseline (document) |
+| `inc_pmp` | Incident ESKD (pmp/year) | 172 | Cirillo [7] de novo HD 160–185 pmp (midpoint) |
 | `pirp_r` | PIRP incidence reduction (share) | 0.10 | e.g. 10% fewer new dialysis starts |
 | `preempt_share` | Share of add’l transplants that are pre-emptive | 0.20 | Applied to AddTx |
 | `preempt_delta` | Incremental saving per pre-emptive tx (€, one-time) | 20 000 | Add-on to transplant savings |
-| `n_dial` | Prevalent dialysis population | 6 500 | Current burden, Fig 14.1 |
+| `n_dial` | Prevalent dialysis population | 5 850 | Cirillo [7] HD ~5,800–5,900 (midpoint); current burden, Fig 14.1 |
 | `r_disc` | Annual discount rate | 0.03 | 0 = undiscounted |
 
 Slider ranges in the app are wider than Table 17.1 (e.g. dialysis 30k–80k, tx Y1 40k–100k) for sensitivity exploration.
@@ -116,7 +116,7 @@ Year 1 can be negative (upfront cost); from year 2 onward *S*_TX(*t*) becomes po
 
 **Incident dialysis and PIRP savings**
 
-- New dialysis cases/year (baseline): **Incident** = Pop_M × inc_pmp (e.g. 5.8 × 200 = 1 160)
+- New dialysis cases/year (baseline): **Incident** = Pop_M × inc_pmp (e.g. 5.8 × 172 = 998)
 - Cases avoided/year with PIRP: **AvoidInc** = Pop_M × inc_pmp × *r*_PIRP
 - Annual PIRP savings (€): **S_PIRP** = AvoidInc × *c*_dial
 
@@ -189,8 +189,10 @@ Figures and the dashboard read from this dict and the same parameter set so all 
 | `model/params.py` | Parameter definitions and min/max ranges (single source of truth) |
 | `model/engine.py` | All formulas: AddTx, S_TX, S_PIRP, S_PRE, cumulative (optional discounting), break-even, burden, Cum_TX_B, Cum_PIRP |
 | `figures/` | Matplotlib: `fig_costs.py` (12.1, 13.1, 14.1), `fig_model_schema.py` (12.2), `fig_savings.py` (17.1–17.3) |
+| `.gitignore` | Ignores Python cache, venv, IDE/OS files, local folders (`image/`, `output/`), Word lock files |
 | `scripts/extract_docx.py` | Extracts `documents/campania_transplant_final.docx` → `documents/campania_transplant_extracted.md` |
 | `documents/` | Source docx, extracted markdown, `AUDIT_REPORT.md`, and `DOCUMENT_VS_ARTICLES.md` (comparison to source articles) |
+| `articles/` | Source PDFs cited in the document (Rucci, Gibertoni, Cirillo, etc.); used for document vs articles comparison |
 
 ---
 
@@ -225,4 +227,4 @@ python scripts/extract_docx.py
 
 ## ✅ Audit and checks
 
-**[documents/AUDIT_REPORT.md](documents/AUDIT_REPORT.md)** summarises calculation checks, graph suggestions, and extended insights. **[documents/DOCUMENT_VS_ARTICLES.md](documents/DOCUMENT_VS_ARTICLES.md)** compares the document to source articles (Rucci, Gibertoni, Cirillo) and lists discrepancies to fix in the Word document. The model implements the document formulas; PIRP annual savings (~€6M) are consistent with the formula (AvoidInc = 116).
+**[documents/AUDIT_REPORT.md](documents/AUDIT_REPORT.md)** summarises calculation checks, graph suggestions, and extended insights. **[documents/DOCUMENT_VS_ARTICLES.md](documents/DOCUMENT_VS_ARTICLES.md)** compares the document to source articles (Rucci, Gibertoni, Cirillo) and lists discrepancies to fix in the Word document. The model implements the document formulas; base parameters `inc_pmp` and `n_dial` are aligned with Cirillo [7]. PIRP annual savings are consistent with the formula (AvoidInc × c_dial).

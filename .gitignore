@@ -1,12 +1,35 @@
 # Python
-
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
 .env
-*
+*.egg-info/
+.eggs/
+dist/
+build/
 
-# IDE / OS
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
 
-# Local / generated (not needed for deployment)
+# OS
+.DS_Store
+Thumbs.db
 
+# Project: local / generated (not needed for deployment)
+image/
+output/
+t.png
 
-# Optional: uncomment to avoid pushing large Word files
+# Word temp/lock files
+~$*
+
+# Optional: uncomment to avoid committing large Word files
 # documents/*.docx
