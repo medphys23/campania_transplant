@@ -1,0 +1,66 @@
+[
+  {
+    "block_index": 221,
+    "targets": [
+      "image1.png"
+    ],
+    "prev_text": "The CT-PIRP algorithm generates seven mutually exclusive subgroups through hierarchical decision rules. The complete classification tree structure is illustrated below:[8][9]",
+    "next_text": "Figure 8.1: CT-PIRP classification tree stratifying CKD patients into seven risk subgroups based on proteinuria, eGFR, phosphate, age, diabetes, and sex."
+  },
+  {
+    "block_index": 499,
+    "targets": [
+      "image2.png"
+    ],
+    "prev_text": "12.1 Overview of RRT Costs",
+    "next_text": "Figure 12.1: Annual per-patient costs by renal replacement therapy modality (European data)."
+  },
+  {
+    "block_index": 557,
+    "targets": [
+      "image3.png"
+    ],
+    "prev_text": "One-way sensitivity analysis is performed over the following parameter ranges:",
+    "next_text": "Figure 12.2: Corrected economic model structure. Three mutually exclusive modules contribute to total savings.."
+  },
+  {
+    "block_index": 581,
+    "targets": [
+      "image4.png"
+    ],
+    "prev_text": "These values represent single-cohort savings for one transplant performed at year 0. Program-level savings depend on annual transplant volume and are modelled separately using incident flow methods (Section 12.2).",
+    "next_text": "Figure 13.1: 10-year cumulative cost trajectories for dialysis and kidney transplantation per patient."
+  },
+  {
+    "block_index": 610,
+    "targets": [
+      "image5.png"
+    ],
+    "prev_text": "This gap indicates substantial capacity for transplant expansion.",
+    "next_text": "Figure 14.1: Current annual ESKD cost distribution in Campania."
+  },
+  {
+    "block_index": 716,
+    "targets": [
+      "image6.png"
+    ],
+    "prev_text": "Table 17.1. Aggregate annual economic impact.",
+    "next_text": "Figure 17.1: Ten-year cumulative savings by transplant expansion scenario (incident-flow model)."
+  },
+  {
+    "block_index": 718,
+    "targets": [
+      "image7.png"
+    ],
+    "prev_text": "Figure 17.1: Ten-year cumulative savings by transplant expansion scenario (incident-flow model).",
+    "next_text": "Figure 17.2: Annual savings by intervention type: transplant expansion, PIRP-related incidence reduction, pre-emptive"
+  },
+  {
+    "block_index": 721,
+    "targets": [
+      "image8.png"
+    ],
+    "prev_text": "Figure 17.2: Annual savings by intervention type: transplant expansion, PIRP-related incidence reduction, pre-emptive",
+    "next_text": "Figure 17.3: Ten-year cumulative savings: PIRP incidence reduction (base case ) compared with business-as-usual trajectory."
+  }
+]

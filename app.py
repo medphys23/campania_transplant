@@ -3,6 +3,8 @@ Campania transplant economic model — Streamlit GUI.f
 Sliders for all parameters (min/max from plan); figures update on every change (fluid).
 """
 import io
+from pathlib import Path
+
 import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
@@ -10,6 +12,9 @@ import matplotlib.pyplot as plt
 from model.params import default_ranges, get_values
 from model import engine
 from figures import fig_costs, fig_model_schema, fig_savings
+
+
+SOURCE_DOC = Path(__file__).resolve().parent / "documents" / "for troisi.docx"
 
 # Cost sensitivity deltas for dashboard ranges (reporting)
 DELTA_C_DIAL = 15_000
@@ -27,6 +32,21 @@ ranges = st.session_state.ranges
 # ----- Sidebar: sliders -----
 st.sidebar.title("Model parameters")
 st.sidebar.caption("Change any slider; figures and summary update immediately.")
+
+st.sidebar.divider()
+st.sidebar.subheader("Source manuscript")
+if SOURCE_DOC.exists():
+    st.sidebar.success(f"Using `{SOURCE_DOC.name}`")
+    st.sidebar.caption(f"Path: `{SOURCE_DOC.relative_to(Path(__file__).resolve().parent)}`")
+    st.sidebar.download_button(
+        "Download manuscript",
+        SOURCE_DOC.read_bytes(),
+        SOURCE_DOC.name,
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    )
+else:
+    st.sidebar.error(f"Missing source manuscript: `{SOURCE_DOC}`")
+    st.sidebar.caption("Add the repaired Word document to `documents/` before using this app for manuscript export.")
 
 with st.sidebar.expander("Demography", expanded=True):
     ranges["pop_m"].value = st.slider(
@@ -221,6 +241,8 @@ burden_10yr_with_all = burden_10yr_bau - savings_10yr_total
 # ----- Main: summary table -----
 st.title("Campania transplant economic model")
 st.caption("Key numbers (use these in your paper). Ranges: dialysis ±€15k, tx Y1 ±€10k, tx Y2+ ±€2.5k.")
+if SOURCE_DOC.exists():
+    st.caption(f"Source manuscript linked for export: `{SOURCE_DOC.name}`")
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:

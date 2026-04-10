@@ -1,0 +1,42 @@
+[
+  {
+    "block_index": 222,
+    "targets": [
+      "image1.png"
+    ],
+    "prev_text": "The CT-PIRP algorithm generates seven mutually exclusive subgroups through hierarchical decision rules. The complete classification tree structure is illustrated below:[8][9]",
+    "next_text": "Figure 8.1: CT-PIRP classification tree stratifying CKD patients into seven risk subgroups based on proteinuria, eGFR, phosphate, age, diabetes, and sex."
+  },
+  {
+    "block_index": 500,
+    "targets": [
+      "image2.png"
+    ],
+    "prev_text": "12.1 Overview of RRT Costs",
+    "next_text": "Figure 12.1: Annual per-patient costs by renal replacement therapy modality (European data)."
+  },
+  {
+    "block_index": 575,
+    "targets": [
+      "image3.png"
+    ],
+    "prev_text": "Table 17.1. Aggregate annual economic impact.",
+    "next_text": "Figure 17.1: Ten-year cumulative savings by transplant expansion scenario (incident-flow model)."
+  },
+  {
+    "block_index": 577,
+    "targets": [
+      "image4.png"
+    ],
+    "prev_text": "Figure 17.1: Ten-year cumulative savings by transplant expansion scenario (incident-flow model).",
+    "next_text": "Figure 17.2: Annual savings by intervention type: transplant expansion, PIRP-related incidence reduction, and the incremental pre-emptive transplantation component."
+  },
+  {
+    "block_index": 580,
+    "targets": [
+      "image5.png"
+    ],
+    "prev_text": "Figure 17.2: Annual savings by intervention type: transplant expansion, PIRP-related incidence reduction, and the incremental pre-emptive transplantation component.",
+    "next_text": "Figure 17.3: Ten-year cumulative savings from PIRP-related incidence reduction under the base-case assumption compared with business-as-usual trajectory."
+  }
+]

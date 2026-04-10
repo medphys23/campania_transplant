@@ -1,0 +1,66 @@
+[
+  {
+    "block_index": 222,
+    "targets": [
+      "image1.png"
+    ],
+    "prev_text": "The CT-PIRP algorithm generates seven mutually exclusive subgroups through hierarchical decision rules. The complete classification tree structure is illustrated below:[8][9]",
+    "next_text": "Figure 8.1: CT-PIRP classification tree stratifying CKD patients into seven risk subgroups based on proteinuria, eGFR, phosphate, age, diabetes, and sex."
+  },
+  {
+    "block_index": 500,
+    "targets": [
+      "image2.png"
+    ],
+    "prev_text": "12.1 Overview of RRT Costs",
+    "next_text": "Figure 12.1: Annual per-patient costs by renal replacement therapy modality (European data)."
+  },
+  {
+    "block_index": 522,
+    "targets": [
+      "image3.png"
+    ],
+    "prev_text": "Sensitivity analysis is presented as one-way variation around key epidemiological and cost assumptions, including dialysis cost, transplant year-1 cost, transplant maintenance cost, transplant activity, and the assumed reduction in incident ESKD under PIRP-style care. The results should be interpreted as scenario-based estimates rather than precise forecasts.",
+    "next_text": "Figure 12.2: Three mutually exclusive modules contribute to total savings."
+  },
+  {
+    "block_index": 531,
+    "targets": [
+      "image4.png"
+    ],
+    "prev_text": "These values describe single-cohort savings for one transplant performed at year 0; program-level savings depend on annual transplant volume and are therefore modelled separately using the incident-flow framework described in Section 12.2.",
+    "next_text": "Figure 13.1: Ten-year cumulative cost trajectories for dialysis and kidney transplantation per patient."
+  },
+  {
+    "block_index": 541,
+    "targets": [
+      "image5.png"
+    ],
+    "prev_text": "This burden should be interpreted alongside the regional epidemiological context: a high dialysis population, relatively low transplant activity compared with benchmark regions, and substantial scope for earlier identification of patients progressing toward kidney failure.",
+    "next_text": "Figure 14.1: Current annual ESKD cost distribution in Campania."
+  },
+  {
+    "block_index": 577,
+    "targets": [
+      "image6.png"
+    ],
+    "prev_text": "Table 17.1. Aggregate annual economic impact.",
+    "next_text": "Figure 17.1: Ten-year cumulative savings by transplant expansion scenario (incident-flow model)."
+  },
+  {
+    "block_index": 579,
+    "targets": [
+      "image7.png"
+    ],
+    "prev_text": "Figure 17.1: Ten-year cumulative savings by transplant expansion scenario (incident-flow model).",
+    "next_text": "Figure 17.2: Annual savings by intervention type: transplant expansion, PIRP-related incidence reduction, and the incremental pre-emptive transplantation component."
+  },
+  {
+    "block_index": 582,
+    "targets": [
+      "image8.png"
+    ],
+    "prev_text": "Figure 17.2: Annual savings by intervention type: transplant expansion, PIRP-related incidence reduction, and the incremental pre-emptive transplantation component.",
+    "next_text": "Figure 17.3: Ten-year cumulative savings from PIRP-related incidence reduction under the base-case assumption compared with business-as-usual trajectory."
+  }
+]

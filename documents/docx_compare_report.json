@@ -1,0 +1,81 @@
+{
+  "old_path": "documents\\campania_transplant_final.docx",
+  "new_path": "documents\\campania_transplant_final_revised.docx",
+  "missing_in_new": {
+    "Figure 12.2: Corrected economic model structure. Three mutually exclusive modules contribute to total savings..": {
+      "index": 558,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": ""
+    },
+    "Table 13.1. Cumulative cost comparison per patient over 10 years.": {
+      "index": 577,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": ""
+    },
+    "Figure 13.1: 10-year cumulative cost trajectories for dialysis and kidney transplantation per patient.": {
+      "index": 582,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": "Pre-emptive kidney transplantation (performed before dialysis initiation) confers 13.2 Pre-Emptive Transplantation: Incremental Economic Benefit"
+    },
+    "Figure 17.2: Annual savings by intervention type: transplant expansion, PIRP-related incidence reduction, pre-emptive": {
+      "index": 719,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": ""
+    },
+    "Figure 17.3: Ten-year cumulative savings: PIRP incidence reduction (base case ) compared with business-as-usual trajectory.": {
+      "index": 722,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": "17.3 Total Estimated Annual Economic Impact"
+    },
+    "Table 17.2. Aggregate annual economic impact.": {
+      "index": 729,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": ""
+    }
+  },
+  "missing_in_old": {
+    "Figure 12.2: Corrected economic model structure. Three mutually exclusive modules contribute to total savings.": {
+      "index": 522,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": ""
+    },
+    "Table 13.1 presents the per-patient cumulative cost comparison over 10 years. These values describe single-cohort savings for one transplant performed at year 0; program-level savings depend on annual transplant volume and are therefore modelled separately using the incident-flow framework described in Section 12.2.": {
+      "index": 529,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": "Figure 13.1: Ten-year cumulative cost trajectories for dialysis and kidney transplantation per patient."
+    },
+    "Figure 13.1: Ten-year cumulative cost trajectories for dialysis and kidney transplantation per patient.": {
+      "index": 530,
+      "has_drawing_next": false,
+      "next_kind": "table",
+      "next_text": "Year | Dialysis cumulative cost | Transplant cumulative cost | Difference / 1 | €50,000 | €60,000 | +€10,000 (transplant higher) / 2 | €100,000 | €72,000 | –€28,000"
+    },
+    "Figure 17.2: Annual savings by intervention type: transplant expansion, PIRP-related incidence reduction, and the incremental pre-emptive transplantation component.": {
+      "index": 578,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": ""
+    },
+    "Figure 17.3: Ten-year cumulative savings from PIRP-related incidence reduction under the base-case assumption compared with business-as-usual trajectory.": {
+      "index": 581,
+      "has_drawing_next": false,
+      "next_kind": "paragraph",
+      "next_text": "17.3 Total Estimated Annual Economic Impact"
+    },
+    "Table 17.2 summarizes the annual savings components and the aggregate projected impact.": {
+      "index": 585,
+      "has_drawing_next": false,
+      "next_kind": "table",
+      "next_text": "Intervention | Annual savings / Transplant expansion to 35 pmp | €19.32 million / Pre-emptive transplantation (20% share) | €0.48 million"
+    }
+  },
+  "changed_following_object": {}
+}
