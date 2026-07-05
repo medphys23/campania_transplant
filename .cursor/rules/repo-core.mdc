@@ -1,0 +1,42 @@
+---
+description: campania_transplant repo purpose, Streamlit model, DOCX tooling, layout
+alwaysApply: true
+---
+
+# campania_transplant — core rules
+
+Dual canonical: keep in sync with [`AGENTS.md`](../../AGENTS.md).
+
+Inherits global rules from `~/.codex/AGENTS.md` and `~/.cursor/rules/`.
+
+## Disk-efficient dependencies
+
+Use `uv`, the shared cache, and `--link-mode hardlink` with the repo-root `.venv`. Keep cache and repo on the same filesystem; avoid bare `pip`, copy mode, and `--no-cache`.
+
+## Purpose
+
+Budget-impact model and Streamlit dashboard for Campania transplant / PIRP paper. Research / health-economics only — not clinical decision support.
+
+## Stack
+
+- `streamlit`, `matplotlib`, `numpy`, `graphviz`, `python-docx`
+- Quick start: `uv venv --python 3.11 .venv`, then `uv pip install --python .\.venv\Scripts\python.exe --link-mode hardlink -r requirements.txt`, then `.\.venv\Scripts\python.exe -m streamlit run app.py`
+- **Word COM preferred** for review-grade DOCX writes on Windows; `python-docx` for diff/extract/repair today
+
+## Layout
+
+- `app.py` — Streamlit entrypoint
+- `model/` — `params.py`, `engine.py` (equations = source of truth)
+- `figures/` — matplotlib builders
+- `scripts/` — DOCX tooling (`extract_docx.py`, `compare_docx_versions.py`, etc.)
+- `documents/` — read-only source paper inputs
+
+## Repo rules
+
+- Model equations in `model/engine.py` align with paper (Appendix X / Table 17.1).
+- Figures regenerate from sliders — no hand-tweaked embeds.
+- `requirements.txt` + `packages.txt` lockstep for Streamlit Cloud.
+
+## Repeatable workflows
+
+Document in [`skills.md`](../../skills.md); mirror to `.cursor/skills/` when workflows exist.

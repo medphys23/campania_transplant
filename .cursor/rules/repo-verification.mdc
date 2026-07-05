@@ -1,0 +1,19 @@
+---
+description: campania_transplant verification commands
+alwaysApply: true
+---
+
+# campania_transplant — Verification
+
+Dual canonical: keep in sync with [`AGENTS.md → Verification`](../../AGENTS.md).
+
+```powershell
+uv pip install --python .\.venv\Scripts\python.exe --link-mode hardlink -r requirements.txt
+.\.venv\Scripts\python.exe -m compileall model figures scripts app.py -q
+```
+
+**Manual:** Streamlit slider QA is interactive — Planner should ask user for thumbs-up after significant dashboard changes.
+
+## Known flaky
+
+- **Graphviz** binary must exist locally for schema figures.

@@ -1,7 +1,12 @@
 # campania_transplant — agent instructions
 
-Inherits global rules from `~/.codex/AGENTS.md`.
+Inherits global rules from `~/.codex/AGENTS.md` and `~/.cursor/rules/`. **Cursor mirror:** [`.cursor/rules/`](.cursor/rules/) — keep in sync with this file.
 
+## Disk-efficient dependencies
+
+- Use the repo-root `.venv` created by `uv venv --python 3.11 .venv`.
+- Install with `uv pip install --python .\.venv\Scripts\python.exe --link-mode hardlink -r requirements.txt` so packages share physical data through the global `uv` cache.
+- Keep the cache and repo on the same filesystem; avoid bare `pip`, copy mode, `--no-cache`, and routine `uv cache clean`.
 ## Purpose
 
 Budget-impact model and interactive Streamlit dashboard for the Campania transplant / PIRP paper. Implements the equations from the source document (Appendix X and Table 17.1); users vary assumptions via sliders and pull dashboard numbers and figures into the manuscript.
@@ -21,8 +26,9 @@ From [`requirements.txt`](requirements.txt):
 Quick start:
 
 ```bash
-pip install -r requirements.txt
-streamlit run app.py
+uv venv --python 3.11 .venv
+uv pip install --python .\.venv\Scripts\python.exe --link-mode hardlink -r requirements.txt
+.\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
 Open the URL Streamlit prints (e.g. `http://localhost:8501`).
@@ -59,8 +65,8 @@ Open the URL Streamlit prints (e.g. `http://localhost:8501`).
 ## Verification (canonical checks for Verifier mode)
 
 ```powershell
-pip install -r requirements.txt
-python -m compileall model figures scripts app.py -q
+uv pip install --python .\.venv\Scripts\python.exe --link-mode hardlink -r requirements.txt
+.\.venv\Scripts\python.exe -m compileall model figures scripts app.py -q
 ```
 
 **Manual / iterative UI:** exercising Streamlit sliders is inherently interactive—Planner should ask the user for a thumbs-up after dashboards change significantly.
@@ -71,8 +77,7 @@ python -m compileall model figures scripts app.py -q
 
 ## Repo skills catalog
 
-Document iterative model + DOCX ingestion cycles in [`skills.md`](skills.md).
-
+Document iterative model + DOCX ingestion cycles in [`skills.md`](skills.md). **Cursor mirror:** also create `.cursor/skills/<name>/SKILL.md` when adding workflows.
 ## Stack propagation
 
 When you introduce a new library, skill, or tool here, update `~/.codex/AGENTS.md` and propagate to other repos per global policy.
