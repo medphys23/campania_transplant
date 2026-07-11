@@ -33,3 +33,4 @@ t.png
 
 # Optional: uncomment to avoid committing large Word files
 # documents/*.docx
+graphify-out/

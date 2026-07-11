@@ -86,3 +86,22 @@ When you introduce a new library, skill, or tool here, update `~/.codex/AGENTS.m
 
 - Do not commit unless the user asks.
 - Keep `documents/` and any locally cached PDFs / DOCX exports out of commits unless the user explicitly approves them.
+
+<!-- BEGIN ORCHESTRATOR-MANAGED: knowledge-retrieval -->
+
+## Orchestrator Knowledge (Optimized)
+- Index-first: `C:\Users\ppyxe\Documents\GitHub\auto_learning_agent\knowledge\INDEX.md` then `C:\Users\ppyxe\Documents\GitHub\auto_learning_agent\knowledge\catalog.jsonl`.
+- Repo-scoped retrieval: `C:\Users\ppyxe\Documents\GitHub\auto_learning_agent\scripts\retrieve_knowledge_for_repo.py --cwd C:\Users\ppyxe\Documents\GitHub\campania_transplant`.
+- Open only shortlisted full records; repo `AGENTS.md` overrides catalog guidance.
+
+<!-- END ORCHESTRATOR-MANAGED: knowledge-retrieval -->
+
+<!-- BEGIN ORCHESTRATOR-MANAGED: graphify-policy -->
+
+## Graphify architectural index
+
+Use the governed federated Graphify graph first for repository orientation, architecture discovery, relationship tracing, symbol discovery, and locating likely implementation files. Query with `C:\Users\ppyxe\Documents\GitHub\auto_learning_agent\scripts\query_graph.py`; select `--repo <id>` for focused repository context.
+
+Graphify is an index, not source of truth. Use actual source and `rg` for exact behavior, configuration, contracts, security-sensitive code, migrations, tests, assertions, error handling, and edits. Keep graphs local, respect `.graphifyignore`, and regenerate code-only graphs after material structural changes. Do not use remote, database, media, cloud, global-graph, or semantic-document features without repository-specific approval. Dirty graphs cannot justify knowledge promotion.
+
+<!-- END ORCHESTRATOR-MANAGED: graphify-policy -->
